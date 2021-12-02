@@ -15,6 +15,9 @@ from oauth2client.service_account import ServiceAccountCredentials #정산
 from io import StringIO
 import urllib.request
 from math import ceil, floor
+telegram_token = '2136534965:AAHqtazIGh-EQOGWS_TUnaqP9qD7x3acPg0'
+telegram_chat_id = 63138118
+bot = telegram.Bot(token = telegram_token)
 
 ##################### 로깅 ###########################
 log_stream = StringIO()    
@@ -2278,6 +2281,7 @@ class mainCog(commands.Cog):
 				color=0xff00ff
 				)
 			await ctx.send( embed=embed, tts=False)
+			bot.sendMessage(chat_id = telegram_chat_id, text = '현재시간')
 		else:
 			return
 
