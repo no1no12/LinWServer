@@ -17,7 +17,7 @@ import urllib.request
 from math import ceil, floor
 import telegram
 
-telegram_token = '2136534965:AAHqtazIGh-EQOGWS_TUnaqP9qD7x3acPg0'
+telegram_token = '5083974648:AAFNqQvGo13K_ent4xUp7BHPG7pdMVkBIyc'
 telegram_chat_id = 63138118
 bot = telegram.Bot(token = telegram_token)
 
