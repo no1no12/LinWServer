@@ -18,7 +18,7 @@ from math import ceil, floor
 import telegram
 
 telegram_token = '5083974648:AAFNqQvGo13K_ent4xUp7BHPG7pdMVkBIyc'
-telegram_chat_id = 63138118
+telegram_chat_id = -1001580888256
 bot = telegram.Bot(token = telegram_token)
 
 ##################### 로깅 ###########################
