@@ -19,7 +19,7 @@ import telegram
 
 telegram_token = '5083974648:AAFNqQvGo13K_ent4xUp7BHPG7pdMVkBIyc'
 telegram_chat_id = -1001580888256
-bot = telegram.Bot(token = telegram_token)
+telegrambot = telegram.Bot(token = telegram_token)
 
 ##################### 로깅 ###########################
 log_stream = StringIO()    
@@ -1072,7 +1072,7 @@ class taskCog(commands.Cog):
 						if fixed_bossTime[i] <= priv0 and fixed_bossTime[i] > priv:
 							fixed_bossFlag0[i] = True
 							await self.bot.get_channel(channel).send("```" + fixed_bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ']```', tts=False)
-							bot.sendMessage(chat_id = telegram_chat_id, text = fixed_bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ' ]')
+							#telegrambot.sendMessage(chat_id = telegram_chat_id, text = fixed_bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ' ]')
 							try:
 								if basicSetting[21] == "1":
 									await PlaySound(self.bot.voice_clients[0], './sound/' + fixed_bossData[i][0] + '알림1.mp3')
@@ -1086,7 +1086,7 @@ class taskCog(commands.Cog):
 						if fixed_bossTime[i] <= priv and fixed_bossTime[i] > now and fixed_bossFlag0[i] == True :
 							fixed_bossFlag[i] = True
 							await self.bot.get_channel(channel).send("```" + fixed_bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ']```', tts=False)
-							bot.sendMessage(chat_id = telegram_chat_id, text = fixed_bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ' ]')
+							#telegrambot.sendMessage(chat_id = telegram_chat_id, text = fixed_bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + fixed_bossData[i][3] +' [' +  fixed_bossTime[i].strftime('%H:%M:%S') + ' ]')
 							try:
 								if basicSetting[21] == "1":
 									await PlaySound(self.bot.voice_clients[0], './sound/' + fixed_bossData[i][0] + '알림.mp3')
